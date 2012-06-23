@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hilite</title>
+		<link rel="stylesheet" href="bootstrap.css">
+		<script type="text/javascript" src="cordova-1.8.1.js"></script>
+		<script type="text/javascript" src="socket.io.js"></script>
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="hilite.js"></script>
+		<style type="text/css">
+			#content {
+				width: 90%;
+				margin-left: auto;
+				margin-right: auto;
+				height: 4em;
+				margin-top: auto;
+				margin-bottom: auto;
+				text-align: center;
+			}
+			#img-hider, #connect-hider {
+				display: none;
+			}
+			label {
+				display: none;
+				font-style: italic;
+			}
+		</style>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#content").css( "margin-top", $( window ).height()*0.25 );
+			});
+		</script>
+	</head>
+	<body>
+		<div id="content">
+			<h1>Hello</h1>
+			<label for="host">host</label>
+			<input type="text" id="host" name="host" />
+			<br/>
+			<label for="port">port</label>
+			<input type="text" id="port" name="port" />
+			<br/>
+			<button id="initializeSocket">Done</button>	
+		</div>
+		<div id="img-hider"><img src="rookille.png" id="image" /></div>
+		<div id="connect-hider">Connected.<br />Waiting for first update...<br /><img src="spinner.gif" /></div>
+	</body>
+</html>
